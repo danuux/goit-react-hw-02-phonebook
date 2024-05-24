@@ -9,16 +9,16 @@ class Contact extends Component {
     number: '',
   };
 
-  handleChange = name => e => {
-    const { target } = e;
+  handleChange = name => event => {
+    const { target } = event;
 
     this.setState(() => ({
       [name]: target.value,
     }));
   };
 
-  handleSubmit = e => {
-    e.preventDefault();
+  handleSubmit = event => {
+    event.preventDefault();
 
     const { onSubmit } = this.props;
     onSubmit(this.state);

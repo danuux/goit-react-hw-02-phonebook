@@ -40,8 +40,8 @@ export class App extends Component {
     }));
   };
 
-  changeFilter = e => {
-    this.setState({ filter: e.currentTarget.value });
+  changeFilter = event => {
+    this.setState({ filter: event.currentTarget.value });
   };
 
   getVisibleContacts = () => {
